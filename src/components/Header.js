@@ -18,6 +18,7 @@ const styles = {
   },
   textStyle: {
     fontSize: 30,
+    fontweight: 'bold',
     textAlign: 'center',
     color: '#63dbfb',
   },

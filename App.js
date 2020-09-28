@@ -53,7 +53,7 @@ function App() {
 const styles = {
   container: {
     backgroundColor: '#3b3c4b',
-    height: 1000,
+    flex: 1,
   },
   mainContainer: {
     paddingLeft: 15,

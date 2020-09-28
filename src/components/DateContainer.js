@@ -43,6 +43,7 @@ const DateContainer = () => {
 const styles = {
   textStyle: {
     fontSize: 20,
+    fontWeight: 'bold',
     color: '#d7dadc',
   },
 };
