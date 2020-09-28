@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 
-var days = [
+let days = [
   'Sunday',
   'Monday',
   'Tuesday',
@@ -11,7 +11,7 @@ var days = [
   'Saturday',
 ];
 
-var months = [
+let months = [
   'January',
   'February',
   'March',
