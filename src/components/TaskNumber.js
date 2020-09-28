@@ -17,4 +17,5 @@ export default TaskNumber;
 
 const styles = {
   color: '#63dbfb',
+  fontSize: 17,
 };
