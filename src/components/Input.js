@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, TextInput, Button} from 'react-native';
+import {View, TextInput, Button, StyleSheet} from 'react-native';
 
 function Input({onPress, onChange, value}) {
   return (
@@ -20,7 +20,7 @@ function Input({onPress, onChange, value}) {
   );
 }
 
-const styles = {
+const styles = StyleSheet.create({
   containerStyle: {
     paddingTop: 15,
     flexDirection: 'row',
@@ -39,6 +39,6 @@ const styles = {
     backgroundColor: '#d7dadc',
     color: 'red',
   },
-};
+});
 
 export default Input;

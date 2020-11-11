@@ -1,5 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import {View, Platform, StatusBar, SafeAreaView} from 'react-native';
+import {
+  View,
+  Platform,
+  StatusBar,
+  SafeAreaView,
+  StyleSheet,
+} from 'react-native';
+
 import Header from './src/components/Header';
 import DateContainer from './src/components/DateContainer';
 import TaskNumber from './src/components/TaskNumber';
@@ -61,10 +68,10 @@ function App() {
   );
 }
 
-const styles = {
+const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#3b3c4b',
     flex: 1,
+    backgroundColor: '#3b3c4b',
     paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
   mainContainer: {
@@ -74,6 +81,6 @@ const styles = {
   dateContainer: {
     paddingTop: 8,
   },
-};
+});
 
 export default App;

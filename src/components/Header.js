@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 
 const Header = () => {
   return (
@@ -9,7 +9,7 @@ const Header = () => {
   );
 };
 
-const styles = {
+const styles = StyleSheet.create({
   containerStyle: {
     paddingBottom: 2,
     borderBottomWidth: 2,
@@ -21,6 +21,6 @@ const styles = {
     textAlign: 'center',
     color: '#63dbfb',
   },
-};
+});
 
 export default Header;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 
 let days = [
   'Sunday',
@@ -40,12 +40,12 @@ const DateContainer = () => {
   );
 };
 
-const styles = {
+const styles = StyleSheet.create({
   textStyle: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#d7dadc',
   },
-};
+});
 
 export default DateContainer;

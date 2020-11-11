@@ -1,13 +1,13 @@
 import React from 'react';
-import {Text} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 
 function TaskNumber({numberOfTasks}) {
   return (
     <>
       {numberOfTasks > 0 ? (
-        <Text style={styles}>{numberOfTasks} active tasks</Text>
+        <Text style={styles.text}>{numberOfTasks} active tasks</Text>
       ) : (
-        <Text style={styles}>No active task</Text>
+        <Text style={styles.text}>No active task</Text>
       )}
     </>
   );
@@ -15,7 +15,9 @@ function TaskNumber({numberOfTasks}) {
 
 export default TaskNumber;
 
-const styles = {
-  color: '#63dbfb',
-  fontSize: 17,
-};
+const styles = StyleSheet.create({
+  text: {
+    color: '#63dbfb',
+    fontSize: 17,
+  },
+});

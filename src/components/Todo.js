@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
 
 function Todo({todo, onDelete}) {
   return (
@@ -19,7 +19,7 @@ function Todo({todo, onDelete}) {
   );
 }
 
-const styles = {
+const styles = StyleSheet.create({
   containerStyle: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -40,5 +40,6 @@ const styles = {
     resizeMode: 'cover',
     width: 30,
   },
-};
+});
+
 export default Todo;
