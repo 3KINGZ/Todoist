@@ -22,8 +22,6 @@ function Todo({todo, onDelete}) {
 const styles = {
   containerStyle: {
     flexDirection: 'row',
-    borderColor: '#606871',
-    borderBottomWidth: 2,
     justifyContent: 'space-between',
     marginTop: 5,
     paddingBottom: 4,

@@ -11,14 +11,13 @@ const Header = () => {
 
 const styles = {
   containerStyle: {
-    paddingTop: 3,
     paddingBottom: 2,
     borderBottomWidth: 2,
     borderColor: '#63dbfb',
   },
   textStyle: {
     fontSize: 30,
-    fontweight: 'bold',
+    fontWeight: 'bold',
     textAlign: 'center',
     color: '#63dbfb',
   },

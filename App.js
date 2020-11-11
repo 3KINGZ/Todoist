@@ -1,12 +1,18 @@
-import React, {useState} from 'react';
-import {View} from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {View, Platform, StatusBar, SafeAreaView} from 'react-native';
 import Header from './src/components/Header';
 import DateContainer from './src/components/DateContainer';
 import TaskNumber from './src/components/TaskNumber';
 import Input from './src/components/Input';
 import TodoList from './src/components/TodoList';
+import {LogBox} from 'react-native';
+import ClearAllBtn from './src/components/ClearAllBtn';
 
 function App() {
+  useEffect(() => {
+    LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
+  }, []);
+
   const [todos, setTodos] = useState([
     {id: Math.floor(Math.random() * 1000), todo: 'learn more'},
     {id: Math.floor(Math.random() * 1000), todo: 'watch movie'},
@@ -28,11 +34,15 @@ function App() {
   }
 
   function deleteTodo(id) {
-    setTodos(todos.filter((td) => td.id !== id));
+    setTodos(todos.filter((td, index) => index !== id));
+  }
+
+  function clearAll() {
+    setTodos([]);
   }
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Header />
       <View style={styles.mainContainer}>
         <View style={styles.dateContainer}>
@@ -45,8 +55,9 @@ function App() {
           value={todo}
         />
         <TodoList todos={todos} onDelete={deleteTodo} />
+        <ClearAllBtn clearAll={clearAll} todos={todos} />
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -54,6 +65,7 @@ const styles = {
   container: {
     backgroundColor: '#3b3c4b',
     flex: 1,
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
   mainContainer: {
     paddingLeft: 15,
